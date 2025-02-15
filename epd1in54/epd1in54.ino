@@ -15,7 +15,7 @@
 // connect these to the corresponding pins on the display (CLK & SDI respectively)
 
 BLEService textService("180C");  // Custom service UUID
-BLECharacteristic textCharacteristic("2A56", BLEWrite | BLEWriteWithoutResponse, 3000);
+BLECharacteristic textCharacteristic("2A56", BLEWrite | BLEWriteWithoutResponse, 500);
 
 
 // Try different drivers: GxEPD2_154_D67, GxEPD2_154_T8
@@ -76,7 +76,9 @@ void setup() {
   BLE.addService(textService);
 
   textCharacteristic.writeValue(""); // Initialize empty
+  BLE.setAdvertisingInterval(1250);
   BLE.advertise();  // Start advertising
+  
 
   Serial.println("Waiting for BLE connections...");
 
