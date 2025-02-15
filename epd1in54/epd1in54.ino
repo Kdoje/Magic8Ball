@@ -11,6 +11,9 @@
 #define EPD_DC    9
 #define EPD_RST   8
 #define EPD_BUSY  7
+// Use pin 13 on the arduino for the CLOCK signal and pin 11 for the COPI (controller out, peripheral in).
+// connect these to the corresponding pins on the display (CLK & SDI respectively)
+
 BLEService textService("180C");  // Custom service UUID
 BLECharacteristic textCharacteristic("2A56", BLEWrite | BLEWriteWithoutResponse, 3000);
 
