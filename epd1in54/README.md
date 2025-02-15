@@ -11,3 +11,6 @@
     * Write a UTF-8 string value using `|` to separate entries. For example
     `Open your third eye|consider purchasing dominos|Go to Jail. Do not pass go, Do not collect $200`
     * Then shake the ball to observe one of your entries appear
+
+### Limitations
+* You can have 20 phrases with about a 480 character limit in the message to set them. You can probably expand this with a more complex packet protocol, but it works good enough for now
